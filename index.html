@@ -1,4 +1,7 @@
 <script>
+  
+  const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwrnCzxUr2lIAXCRXq4GGSHbdVRXO49iJhHSzs9svMtnCnf-lnkh3wYVSLFfuNQiYB71w/exec";
+  
   function get(parameterName) {
     var result = null,
         tmp = [];
@@ -11,7 +14,7 @@
   }
   
   var k = get('k');
-  fetch('https://script.google.com/macros/s/AKfycbwrnCzxUr2lIAXCRXq4GGSHbdVRXO49iJhHSzs9svMtnCnf-lnkh3wYVSLFfuNQiYB71w/exec?k='+k)
+  fetch(AS_URL_BASE+'?k='+k)
   .then(r => r.text())
   .then((r) => {
     console.log(r);
