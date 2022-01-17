@@ -1,6 +1,9 @@
 <script>
   fetch('https://script.google.com/macros/s/AKfycbwrnCzxUr2lIAXCRXq4GGSHbdVRXO49iJhHSzs9svMtnCnf-lnkh3wYVSLFfuNQiYB71w/exec')
-  .text()
-  .then(data => console.log(data));
+  .then(r => r.text())
+  .then((r) => {
+    console.log(r)
+  })
+  .catch(err => console.log(err))
   //document.location.replace('https://www.google.es');
 </script>
